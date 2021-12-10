@@ -1,5 +1,10 @@
 // fight function with parameter for enemy's object holding name, health, and attack values
 var fight = function(pickedEnemyObj) {
+  // keep track of who goes first
+  var isPlayerTurn = true;
+  if (Math.random() > 0.5) {
+    isPlayerTurn = false;
+  }
   //repeat and execute as long as the enemy-robot and player-robot is alive
   while(playerInfo.health > 0 && pickedEnemyObj.health > 0) {
     //Asks the player if they want to fight
